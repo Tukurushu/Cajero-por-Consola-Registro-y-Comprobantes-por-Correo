@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cajero por Consola Registro y Comprobantes por Correo", "Cajero por Consola Registro y Comprobantes por Correo\Cajero por Consola Registro y Comprobantes por Correo.csproj", "{2E529D82-9746-43E2-922F-1934A245F00C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E529D82-9746-43E2-922F-1934A245F00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E529D82-9746-43E2-922F-1934A245F00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E529D82-9746-43E2-922F-1934A245F00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E529D82-9746-43E2-922F-1934A245F00C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E41D7002-1716-4C95-A110-4497E42CD0CA}
+	EndGlobalSection
+EndGlobal
