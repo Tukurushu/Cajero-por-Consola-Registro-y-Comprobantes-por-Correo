@@ -91,6 +91,7 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
             }
             while (intentos >= 0);
         }
+
         static double consultar()
         {
             return saldo;
