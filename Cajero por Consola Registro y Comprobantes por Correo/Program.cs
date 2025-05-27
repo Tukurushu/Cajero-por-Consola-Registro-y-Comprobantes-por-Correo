@@ -19,7 +19,7 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
             Retirar_dinero, //
             Revisar_Historial_depositos, //
             Revisar_historial_retiros, //
-            EnviarCorreo,                    //  
+            Contar,//
             Salir //
         }
         static double saldo = 0;
@@ -52,9 +52,20 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
                             case Menu.Revisar_historial_retiros:
                                 Historialret();
                                 break;
-                            case Menu.EnviarCorreo:
-                                break;
-
+                            case Menu.Contar:
+                                  if (Depositos.Count > Retiros.Count)
+                                {
+                                    Console.WriteLine("Hay mas numero de depositos");
+                                    Console.WriteLine($"El numero de depositos son: {Depositos.Count}");
+                                    Console.WriteLine($"El numero de retiros son: {Retiros.Count}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Hay mas numero de retiros");
+                                    Console.WriteLine($"El numero de retiros son:{Retiros.Count}");
+                                    Console.WriteLine($"El numero de depositos son: {Depositos.Count}");
+                                }
+                                break; 
                             case Menu.Salir:
                                 Environment.Exit(1);
                                 break;
@@ -89,7 +100,6 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
         {
             Console.WriteLine("Cuanto vas a depositar");
             double dep = Convert.ToDouble(Console.ReadLine());
-            Depositos.Add(DateTime.Now, dep);
             saldo += dep;
             Depositos.Add(DateTime.Now, dep);
             Console.WriteLine("deposito hecho con exito");
@@ -183,7 +193,6 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
             smtp.Send(correo);
             return true;
         }
-
         static Menu Men()
         {
             Console.WriteLine("Seleccione una opción:");
@@ -193,12 +202,105 @@ namespace Cajero_por_Consola_Registro_y_Comprobantes_por_Correo
             Console.WriteLine("3) Retirar dinero");
             Console.WriteLine("4) Revisar Historial de depositos");
             Console.WriteLine("5) Revisar historial de retiros");
-            Console.WriteLine("6) Enviar el correo");
-            Console.WriteLine("7) Salir");
+            Console.WriteLine("6) ¿Que hay mas, depositos o retiros?");
+            Console.WriteLine("7) SALIR");
             Console.WriteLine("----------------------------------");
             Menu opc = (Menu)Convert.ToInt32(Console.ReadLine());
             return opc;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         static bool IniciarSesion()
         {
             Console.WriteLine("------------------");
